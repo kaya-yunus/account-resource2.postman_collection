@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "f72496ae-98f0-4da2-8a48-a19bba3366dd",
+		"name": "account-resource2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14360374"
+	},
+	"item": [
+		{
+			"name": "CreateAuthentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"admin\",\r\n  \"rememberMe\": true,\r\n  \"username\": \"admin79\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://medunna.com/api/authenticate",
+					"protocol": "https",
+					"host": [
+						"medunna",
+						"com"
+					],
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "currentAccount",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjc5IiwiYXV0aCI6IlJPTEVfQURNSU4iLCJleHAiOjE2Njg3NjcwOTN9.PnMBNRqQ3SNIeOMDoD4Id-DlDVGK0z7SmYkjcxsR4-Biiz7MAehzBldemtA3YPJnuP6xitJ5MzileauUtn2mog",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://medunna.com/api/account",
+					"protocol": "https",
+					"host": [
+						"medunna",
+						"com"
+					],
+					"path": [
+						"api",
+						"account"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}
